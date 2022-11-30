@@ -16,3 +16,4 @@ cp -nu *.html ../ - Creates a script that copies all the HTML files from the cur
 mv [[:upper:]]* /tmp/u - Creates a script that moves all files beginning with an uppercase letter to the directory /tmp/u.
 rm *~ - Creates a script that deletes all files in the current working directory that end with the character ~
 mkdir -p welcome/to/school - Creates a script that creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory
+ls -pamv - Write a command that lists all the files and directories of the current directory, separated by commas (,)
