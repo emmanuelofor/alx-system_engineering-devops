@@ -7,3 +7,4 @@ chmod u+x hello- Write a script that adds execute permission to the owner of the
 chmod +114 hello - Write a script that adds execute permission to the owner and the group owner, and read permission to other users, to the file hello
 chmod +111 hello - Write a script that adds execution permission to the owner, the group owner and the other users, to the file hello
 chmod 007 hello - Write a script that sets the permission to the file hello as follows: Owner: no permission at all; Group: no permission at all; Other users: all the permissions
+chmod 753 hello - Write a script that sets the mode of the file hello to this: The file hello will be in the working directory; You are not allowed to use commas for this script
