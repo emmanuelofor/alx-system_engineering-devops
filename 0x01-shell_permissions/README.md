@@ -4,4 +4,4 @@ groups - Write a script that prints all the groups the current user is part of
 chown betty hello- Write a script that changes the owner of the file hello to the user betty
 touch hello -Write a script that creates an empty file called hello
 chmod u+x hello- Write a script that adds execute permission to the owner of the file hello
-chmod 554 hello - Write a script that adds execute permission to the owner and the group owner, and read permission to other users, tothe file hello
+chmod +114 hello - Write a script that adds execute permission to the owner and the group owner, and read permission to other users, to the file hello
