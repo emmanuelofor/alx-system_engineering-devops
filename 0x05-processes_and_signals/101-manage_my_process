@@ -3,7 +3,7 @@
 # and displays To infinity and beyond indefinitely
 # and displays I hate the kill command when receiving a SIGTERM signal
 # and displays Y U no love me?! when receiving a SIGINT signal
-# Script als deletes the file /var/run/myscript.pid and terminates itself while receiving a SIGQUIT or SIGTERM signal
+# Script also deletes the file /var/run/myscript.pid and terminates itself while receiving a SIGQUIT or SIGTERM signal
 
 echo $$ >> /var/run/myscript.pid
 
