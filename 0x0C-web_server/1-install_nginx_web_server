@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install nginx on web server
+# Commands to Install nginx on web server
 
 sudo apt-get update
 sudo apt-get install nginx
@@ -7,7 +7,7 @@ sudo ufw 'Nginx HTTP'
 
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
-#testing nginx configuration
+# testing nginx configuration
 sudo nginx -t
 
 sudo service nginx reload
