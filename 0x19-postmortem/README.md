@@ -1,26 +1,33 @@
-Postmortem: Server Outage on 3rd June 2023
-Issue Summary
-•	Duration: The outage started on 3rd June 2023 at 10:00 am GMT + 1 and lasted for 37 minutes.
-•	Impact: All clients encountered an HTTP 500 error. This disruption affected 100% of our user base, rendering them unable to access our services.
-•	Root Cause: Upgrades were deployed directly to production servers without prior testing in a controlled environment, leading to software version incompatibilities.
-Timeline (GMT + 1)
-•	9:45 AM: Server upgrades started without prior testing on test environments.
-•	10:00 AM: All production servers experienced an outage.
-•	10:00 AM: Monitoring tools detected the outage and alerted the on-call team.
-•	10:10 AM: On-call team acknowledged the alert and began assessing the situation.
-•	10:15 AM: Decision made to roll back servers to their previous state.
-•	10:20 AM: Rollback completed successfully.
-•	10:20 AM: Restart of servers initiated.
-•	10:22 AM: Traffic fully restored. All users could access the services again.
-Root Cause and Resolution 
-The issue commenced after a server upgrade began at 9:45 am GMT + 1. Unfortunately, this upgrade hadn't been tested in a staging environment. It required authentication from a third-party software, which wasn't compatible with the software version on our servers. The immediate resolution was rolling back to the server's previous state and then updating the software to a compatible version.
-Corrective and Preventative Measures
-1.	Broad Improvements:
-•	Always deploy changes first to test environments.
-•	Refine alert mechanisms to predict potential crashes or failures.
-2.	Specific Tasks:
-•	Enforce a strict protocol where all changes must be validated in test environments before moving to production.
-•	Upgrade all servers to ensure compatibility with the latest third-party software integrations.
-•	Adjust monitoring tool thresholds to alert engineers even with minor performance degradations, giving them a head start before a full-blown outage.
-•	Conduct regular training sessions for the engineering team to reinforce best practices in deployment and emergency response.
-In conclusion, this outage, while unfortunate, has provided us with valuable insights. We are committed to implementing the corrective measures outlined above to ensure that such disruptions do not recur in the future. We deeply regret the inconvenience caused and thank our clients for their patience.
+# Postmortem: Server Outage on 3rd June 2023 🚫🔥
+
+## 📋 Issue Summary
+- **Duration**: Started at **10:00 am GMT** on **3rd June 2023**, lasting **37 minutes**.
+- **Impact**: Everyone met our not-so-friendly neighbor, Mr. HTTP 500 Error. Result? **100%** of our users were twiddling their thumbs, unable to access our services.
+- **Root Cause**: Deployed upgrades to our live audience (a.k.a. production servers) without a dress rehearsal in the test environment. And, of course, software version dramas ensued.
+
+## 🕰️ Timeline (GMT)
+- **9:45 AM**: Began server upgrades without the safety net (testing).
+- **10:00 AM**: Boom! Production servers go dark.
+- **10:00 AM**: Our trusty monitoring tools sense disturbance in the force and scream alerts.
+- **10:10 AM**: On-call team springs to action (hopefully not spilling coffee).
+- **10:15 AM**: "Time to go back!" Decision to roll back servers is made.
+- **10:20 AM**: We're back in time! Rollback success.
+- **10:20 AM**: Servers flexing their muscles with a restart.
+- **10:22 AM**: Green lights everywhere. Traffic is flowing, and all is right in the world.
+
+## 🔍 Root Cause and Resolution
+Commenced a server upgrade at **9:45 am GMT** without the usual testing protocol. The new, shiny upgrade wanted a special handshake (authentication) from third-party software. Alas! Our servers didn't know the secret handshake because of software version mismatch. Immediate fix? Time-travel (roll back) to when everyone was friends and then teach our servers the new handshake (update software).
+
+## 🛠️ Corrective and Preventative Measures
+
+### Broad Improvements:
+- **First Impressions Matter**: Always introduce changes first in the test environment.
+- **ESP for Servers**: Refine our alert system to catch even the faintest whispers of issues.
+
+### Specific Tasks:
+1. **Golden Rule**: Make it law to validate all changes in test environments first.
+2. **Keeping Up With The Joneses**: Ensure all servers are compatible with the latest software trends.
+3. **Sensitive Ears**: Tune our monitoring tools to be more sensitive, catching even minor hiccups.
+4. **Server University**: Regular training for the engineering folks. Brush up on best practices and emergency maneuvers.
+
+In conclusion, while this was a hiccup in our usually smooth journey, it's given us some learning homework. We promise to be better. Huge shout-out to our users for their patience and understanding. Here's to smoother surfing! 🌊🏄‍♂️
