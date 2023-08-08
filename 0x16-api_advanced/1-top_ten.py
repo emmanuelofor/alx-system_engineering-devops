@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Retrieve the top 10 hot posts' titles from a Reddit subreddit."""
+"""Function to print hot posts on a given Reddit subreddit."""
 import requests
 
 def top_ten(subreddit):
-    """Display the titles of the leading 10 hot posts for the given subreddit."""
+    """Print the titles of the 10 hottest posts on a given subreddit."""
     
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {
